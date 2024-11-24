@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Smartphone X12",
+        "precio": 750,
+        "imagen": "smartphone.jpg",
+        "stock": 15
+    },
+    {
+        "id": 2,
+        "nombre": "Laptop Pro 15\"",
+        "precio": 1200,
+        "imagen": "laptop.jpg",
+        "stock": 8
+    },
+    {
+        "id": 3,
+        "nombre": "Auriculares Inalámbricos",
+        "precio": 200,
+        "imagen": "auriculares.jpg",
+        "stock": 20
+    },
+    {
+        "id": 4,
+        "nombre": "Tablet Z10",
+        "precio": 500,
+        "imagen": "tablet.jpg",
+        "stock": 10
+    }
+]
