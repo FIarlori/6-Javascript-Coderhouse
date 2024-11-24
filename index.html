@@ -28,8 +28,41 @@
             <button id="cerrar-carrito">Cerrar</button>
         </div>
     </div>
+
+    <div id="total-carrito" style="font-weight: bold; margin-top: 20px;">Total: $0.00</div>
+
+
+    <div id="filtros">
+        <label for="filtroPrecio">Filtrar por precio:</label>
+        <select id="filtroPrecio">
+            <option value="todos">Todos</option>
+            <option value="bajo">Bajo a Alto</option>
+            <option value="alto">Alto a Bajo</option>
+        </select>
     
+        <label for="filtroCategoria">Filtrar por categoría:</label>
+        <select id="filtroCategoria">
+            <option value="todos">Todos</option>
+            <option value="electronica">Electrónica</option>
+            <option value="ropa">Ropa</option>
+            <!-- Agrega más categorías si las tienes -->
+        </select>
     
+        <label for="filtroDisponibilidad">Filtrar por disponibilidad:</label>
+        <select id="filtroDisponibilidad">
+            <option value="todos">Todos</option>
+            <option value="disponible">Disponible</option>
+            <option value="agotado">Agotado</option>
+        </select>
+    
+        <button id="aplicarFiltros">Aplicar Filtros</button>
+    </div>
+    
+    <div id="barraBusqueda">
+        <input type="text" id="buscarProducto" placeholder="Buscar producto...">
+    </div>
+
+
     <footer>
         <p>© 2024 Mi Tienda Electrónica</p>
     </footer>
