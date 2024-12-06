@@ -3,28 +3,48 @@
         "id": 1,
         "nombre": "Smartphone X12",
         "precio": 750,
-        "imagen": "smartphone.jpg",
-        "stock": 15
+        "imagen": "assets/smartphone.jpg",
+        "stock": 15,
+        "categoria": "smartphones",
+        "descripcion": "Un smartphone con pantalla AMOLED y procesador de última generación.",
+        "disponible": true,
+        "marca": "TechBrand",
+        "modelo": "X12"
     },
     {
         "id": 2,
         "nombre": "Laptop Pro 15\"",
         "precio": 1200,
-        "imagen": "laptop.jpg",
-        "stock": 8
+        "imagen": "assets/laptop.jpg",
+        "stock": 8,
+        "categoria": "laptops",
+        "descripcion": "Laptop de alto rendimiento con pantalla de 15 pulgadas y 16GB de RAM.",
+        "disponible": true,
+        "marca": "PowerCompute",
+        "modelo": "Pro 15"
     },
     {
         "id": 3,
         "nombre": "Auriculares Inalámbricos",
         "precio": 200,
-        "imagen": "auriculares.jpg",
-        "stock": 20
+        "imagen": "assets/auriculares.jpg",
+        "stock": 20,
+        "categoria": "accesorios",
+        "descripcion": "Auriculares inalámbricos con cancelación de ruido y batería de larga duración.",
+        "disponible": true,
+        "marca": "SoundWave",
+        "modelo": "AirNoise"
     },
     {
         "id": 4,
         "nombre": "Tablet Z10",
         "precio": 500,
-        "imagen": "tablet.jpg",
-        "stock": 10
+        "imagen": "assets/tablet.jpg",
+        "stock": 10,
+        "categoria": "tablets",
+        "descripcion": "Tablet con pantalla de 10 pulgadas y capacidad de almacenamiento de 128GB.",
+        "disponible": true,
+        "marca": "TabElite",
+        "modelo": "Z10"
     }
 ]

@@ -1,13 +1,12 @@
-/* Reset básico */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
 }
 
 header {
-    background-color: #333;
+    background-color: #121254;
     color: white;
     padding: 1em;
     text-align: center;
@@ -24,6 +23,8 @@ button {
     padding: 0.5em 1em;
     cursor: pointer;
     border-radius: 5px;
+    font-family: 'Montserrat', sans-serif; /* Ensure button text uses Montserrat */
+
 }
 
 button:hover {
@@ -32,11 +33,12 @@ button:hover {
 
 main {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 20px auto 0; /* Elimina margen adicional en la parte inferior */
     padding: 1em;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    flex-grow: 1; /* Si estás usando flexbox, esto ayudará a expandir el main */
 }
 
 .producto {
@@ -45,50 +47,57 @@ main {
     background: white;
     text-align: center;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 400px; /* Altura total del contenedor */
 }
 
 .producto img {
-    max-width: 100%;
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: contain; /* Esto evitará que las imágenes se deformen */
     border-radius: 5px;
+}
+
+.producto .descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
+    margin-top: 10px; /* Espacio entre la imagen y la descripción */
+}
+
+.producto .descripcion h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.producto .descripcion p {
+    margin: 5px 0;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.producto button {
+    margin-top: auto; /* Asegura que el botón se quede en la parte inferior */
 }
 
 footer {
     text-align: center;
-    padding: 1em;
-    background-color: #333;
+    padding: 1em 0; /* Ajusta el padding superior e inferior */
+    background-color: #121254;
     color: white;
+    margin-top: 0; /* Asegura que el margen superior del footer no empuje hacia abajo */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .hidden {
     display: none !important;
 }
 
-#carrito-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    padding: 50px; /* Espaciado externo alrededor del modal */
-    box-sizing: border-box;
-}
 
-/* Aseguramos que el modal tenga el estilo adecuado para los productos */
-.carrito-contenido-wrapper {
-    background: white;
-    border-radius: 10px;
-    padding: 40px;
-    max-width: 600px;
-    max-height: 80vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
+
 
 /* Cambiar a un contenedor con 'flex' para alinear los productos */
 .carrito-contenido {
@@ -123,6 +132,7 @@ footer {
 
 .carrito-contenido h2 {
     margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .carrito-producto {
@@ -135,10 +145,138 @@ footer {
 .carrito-producto h3 {
     margin: 0;
     font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .carrito-producto p {
     margin: 5px 0;
     font-size: 1em;
+    color: #121254;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.notificacion {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    display: none; /* Se oculta inicialmente */
+}
+
+/* Asegura que el botón "Ver Carrito" se ubique a la derecha */
+.ver-carrito {
+    position: fixed;
+    top: 20px; /* Ajusta según sea necesario */
+    right: 20px; /* Se coloca a la derecha */
+    background-color: #007bff;
+    color: white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ver-carrito:hover {
+    background-color: #0056b3;
+}
+
+/* Tamaño del ícono */
+.ver-carrito .fa {
+    font-size: 18px;
+}
+
+/* Asegura que el botón "Ver Carrito" se ubique a la derecha */
+.ver-carrito {
+    position: fixed;
+    top: 20px; /* Ajusta según sea necesario */
+    right: 20px; /* Se coloca a la derecha */
+    background-color: #007bff;
+    color: white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el ícono y el texto */
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ver-carrito:hover {
+    background-color: #0056b3;
+}
+
+/* Tamaño del ícono */
+.ver-carrito .fa {
+    font-size: 18px;
+}
+
+
+
+.menu-container {
+    position: absolute;
+    top: 20px; 
+    left: 20px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: #121254;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    visibility: hidden; /* Menú oculto por defecto */
+    opacity: 0; /* El menú es completamente transparente */
+    transform: translateY(-10px); /* Desplazamiento hacia arriba para una animación suave */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s, transform 0.3s ease; /* Transiciones para una entrada suave */
+    width: 200px;
+    z-index: 1000;
+}
+
+#dropdown-menu.show {
+    visibility: visible; /* Hacer visible el menú */
+    opacity: 1; /* El menú será opaco */
+    transform: translateY(0); /* El menú vuelve a su posición original */
+    transition: opacity 0.3s ease, visibility 0s linear 0s, transform 0.3s ease; /* Transiciones para mostrarlo */
+}
+
+#dropdown-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
     color: #333;
+    display: block;
+}
+
+#dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
 }

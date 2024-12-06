@@ -6,67 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Electrónica</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <header>
+
         <h1>Mi Tienda Electrónica</h1>
+
+        <!-- Menú desplegable -->
+        <div class="menu-container">
+            <div id="menu-icon" class="menu-icon">☰</div>
+            <div id="dropdown-menu" class="dropdown-menu">
+                <a href="#">Inicio</a>
+                <a href="#">Buscar</a>
+                <a href="#">Categorias</a>
+                <ul class="submenu">
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Tablets</a></li></ul>
+                <a href="#">Precios</a>
+                <ul class="submenu">
+                    <li><a href="#">Menor a mayor</a></li>
+                    <li><a href="#">Mayor a menor</a></li>
+            </div>
+        </div>
+
+
+
         <nav>
-            <button id="ver-carrito">Ver Carrito</button>
+            <button id="verCarritoBtn" class="verCarritoBtn">
+                <i class="fa fa-shopping-cart"></i> Ver Carrito
+            </button>
         </nav>
     </header>
     <main id="app">
         <!-- Aquí se generará el catálogo de productos dinámicamente -->
     </main>
-    <!-- Contenedor del carrito -->
-    <div id="carrito-modal" class="hidden">
-        <div class="carrito-contenido-wrapper">
-            <h2>Tu Carrito</h2>
-            <div id="productos-carrito" class="carrito-contenido">
-                <!-- Aquí se generará el contenido dinámico del carrito -->
-            </div>
-            <button id="cerrar-carrito">Cerrar</button>
-        </div>
-    </div>
+
 
     <div id="total-carrito" style="font-weight: bold; margin-top: 20px;">Total: $0.00</div>
 
-
-    <div id="filtros">
+    <form id="filtros">
         <label for="filtroPrecio">Filtrar por precio:</label>
-        <select id="filtroPrecio">
+        <select id="filtroPrecio" name="precio">
             <option value="todos">Todos</option>
             <option value="bajo">Bajo a Alto</option>
             <option value="alto">Alto a Bajo</option>
         </select>
-    
+
         <label for="filtroCategoria">Filtrar por categoría:</label>
-        <select id="filtroCategoria">
+        <select id="filtroCategoria" name="categoria">
             <option value="todos">Todos</option>
             <option value="electronica">Electrónica</option>
             <option value="ropa">Ropa</option>
-            <!-- Agrega más categorías si las tienes -->
         </select>
-    
+
         <label for="filtroDisponibilidad">Filtrar por disponibilidad:</label>
-        <select id="filtroDisponibilidad">
+        <select id="filtroDisponibilidad" name="disponibilidad">
             <option value="todos">Todos</option>
             <option value="disponible">Disponible</option>
             <option value="agotado">Agotado</option>
         </select>
-    
-        <button id="aplicarFiltros">Aplicar Filtros</button>
-    </div>
-    
-    <div id="barraBusqueda">
-        <input type="text" id="buscarProducto" placeholder="Buscar producto...">
-    </div>
 
+        <button type="submit" id="aplicarFiltros">Aplicar Filtros</button>
+    </form>
+
+    <form id="barraBusqueda">
+        <input type="text" id="buscarProducto" name="busqueda" placeholder="Buscar producto...">
+    </form>
 
     <footer>
         <p>© 2024 Mi Tienda Electrónica</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script defer src="script.js"></script>
+
+
+
+
 </body>
 
 </html>

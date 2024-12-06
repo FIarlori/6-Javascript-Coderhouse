@@ -6,7 +6,6 @@ Este es un proyecto de carrito de compras para una tienda en línea. El proyecto
 
 - **Catálogo de productos**: Los productos se cargan desde un archivo `productos.json` y se muestran en una página principal.
 - **Agregar al carrito**: Los usuarios pueden agregar productos al carrito desde la vista del catálogo.
-- **Ver el carrito**: Los usuarios pueden ver el contenido del carrito en un modal.
 - **Modificar la cantidad**: Los usuarios pueden cambiar la cantidad de productos en el carrito, con validación de cantidad máxima basada en el stock disponible.
 - **Eliminar productos**: Los usuarios pueden eliminar productos del carrito.
 - **Total del carrito**: El total de la compra se calcula automáticamente y se actualiza cuando se realizan cambios en el carrito.
