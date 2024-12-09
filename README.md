@@ -18,7 +18,7 @@ Este es un proyecto de carrito de compras para una tienda en línea. El proyecto
 El proyecto está compuesto por los siguientes archivos:
 
 - `index.html`: Página principal que contiene el catálogo de productos y el carrito de compras.
-- `script.js`: Archivo JavaScript que contiene la lógica de funcionamiento del carrito de compras, carga de productos, manipulación del carrito y almacenamiento en `localStorage`.
+- `miarchivo.js`: Archivo JavaScript que contiene la lógica de funcionamiento del carrito de compras, carga de productos, manipulación del carrito y almacenamiento en `localStorage`.
 - `data/productos.json`: Archivo JSON que contiene la lista de productos disponibles para la venta.
 - `assets/`: Carpeta que contiene las imágenes de los productos.
 
