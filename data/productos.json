@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "nombre": "Smartphone X12",
+        "nombre": "Samsung Galaxy<br>S24 Ultra",
         "precio": 750,
         "imagen": "../assets/images/smartphone.jpg",
         "stock": 15,
@@ -13,7 +13,7 @@
     },
     {
         "id": 2,
-        "nombre": "Laptop Pro 15\"",
+        "nombre": "Notebook Lenovo<br>Ideapad 15alc7\"",
         "precio": 1200,
         "imagen": "../assets/images/laptop.jpg",
         "stock": 8,
@@ -25,7 +25,7 @@
     },
     {
         "id": 3,
-        "nombre": "Auriculares Inalámbricos",
+        "nombre": "Auriculares JBL Tune<br>520bt Negro",
         "precio": 200,
         "imagen": "../assets/images/auriculares.jpg",
         "stock": 20,
@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "nombre": "Tablet Z10",
+        "nombre": "Samsung Galaxy<br>Tab A9 ",
         "precio": 500,
         "imagen": "../assets/images/tablet.jpg",
         "stock": 10,

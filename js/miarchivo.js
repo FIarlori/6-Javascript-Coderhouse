@@ -133,7 +133,7 @@ function renderizarCarrito() {
 
     carrito.forEach((producto) => {
         const productoCarrito = document.createElement("div");
-        productoCarrito.className = "producto-carrito";
+        productoCarrito.className = "producto";
 
         productoCarrito.innerHTML = `
             <h3>${producto.nombre}</h3>
@@ -281,7 +281,7 @@ function renderizarCarrito() {
 
     carrito.forEach((producto) => {
         const productoCarrito = document.createElement("div");
-        productoCarrito.className = "producto-carrito";
+        productoCarrito.className = "producto";
 
         productoCarrito.innerHTML = `
             <h3>${producto.nombre}</h3>

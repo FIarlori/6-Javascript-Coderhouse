@@ -1,22 +1,25 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-    const productosCarrito = document.getElementById("productos-carrito");
+    const productosCarrito = document.getElementById("producto-carrito");
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     if (carrito.length === 0) {
         productosCarrito.innerHTML = "<p>Tu carrito está vacío.</p>";
     } else {
         carrito.forEach(producto => {
-            const productoCarrito = document.createElement("div");
-            productoCarrito.classList.add("producto-carrito");
+            // Crear un div para cada producto
+            const productoDiv = document.createElement("div");
+            productoDiv.classList.add("producto");
 
-            productoCarrito.innerHTML = `
+            productoDiv.innerHTML = `
+                <img src="${producto.imagen}" alt="${producto.nombre}">
                 <h3>${producto.nombre}</h3>
                 <p>Precio: $${producto.precio}</p>
                 <p>Cantidad: ${producto.cantidad}</p>
                 <p>Subtotal: $${(producto.precio * producto.cantidad).toFixed(2)}</p>
                 <button onclick="eliminarDelCarrito(${producto.id})">Eliminar</button>
             `;
-            productosCarrito.appendChild(productoCarrito);
+            productosCarrito.appendChild(productoDiv);
         });
 
         const total = carrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);

@@ -49,7 +49,7 @@ main {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    height: 400px; /* Altura total del contenedor */
+    height: 450px; /* Altura total del contenedor */
 }
 
 .producto img {
@@ -143,56 +143,6 @@ footer {
 .carrito-contenido h2 {
     margin-top: 0;
     font-family: 'Montserrat', sans-serif;
-}
-
-/* Asegurarse de que los productos en el carrito se vean como en la tienda */
-.carrito-producto {
-    display: flex;
-    flex-direction: row; /* Alineación horizontal de los elementos dentro de cada producto */
-    align-items: center;
-    margin-bottom: 15px;
-    padding: 10px;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-.carrito-producto img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
-}
-
-.carrito-producto .descripcion-producto {
-    display: flex;
-    flex-direction: column;
-}
-
-.carrito-producto .descripcion-producto h3 {
-    font-size: 1.2em;
-    margin: 0;
-}
-
-.carrito-producto p {
-    margin: 5px 0;
-    font-size: 1em;
-    color: #121254;
-}
-
-.carrito-producto button {
-    margin-top: 10px;
-    background-color: #f44336; /* Rojo para el botón de eliminar */
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.carrito-producto button:hover {
-    background-color: #d32f2f; /* Rojo más oscuro cuando pasa el ratón */
 }
 
 .notificacion {
@@ -341,12 +291,21 @@ footer {
 }
 
 
+#producto-carrito {
+   
+    max-width: 1200px;
+    margin: 20px auto 0; /* Elimina margen adicional en la parte inferior */
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    flex-grow: 1; /* Si estás usando flexbox, esto ayudará a expandir el main */
+}
+
+
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-main {
-    flex: 1;
 }
